@@ -1,6 +1,7 @@
 <template>
   <article>
     <nuxt-content :document="article" />
+    <pre> {{ article }} </pre>
   </article>
 </template>
 
