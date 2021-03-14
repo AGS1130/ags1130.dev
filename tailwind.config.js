@@ -36,6 +36,13 @@ module.exports = {
       heading: "Asap",
       body: "Poppins",
     },
+    screens: {
+      sm: "640px",
+      md: "800px",
+      lg: "1000px",
+      xl: "1200px",
+      "2xl": "1500px",
+    },
   },
   variants: {
     // backgroundColor: ["dark", "dark-hover", "hover"],

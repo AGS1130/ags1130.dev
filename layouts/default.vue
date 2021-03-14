@@ -3,7 +3,7 @@
     <Header />
     <main>
       <Aside />
-      <Nuxt />
+      <nuxt />
     </main>
     <Footer />
   </div>
