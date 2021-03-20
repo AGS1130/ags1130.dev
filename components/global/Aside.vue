@@ -5,7 +5,9 @@
     <div
       class="background-img bg-center bg-no-repeat bg-cover inset-0 absolute"
     ></div>
-    <div class="content-wrapper box-border relative md:table md:h-full md:w-full">
+    <div
+      class="content-wrapper box-border relative md:table md:h-full md:w-full"
+    >
       <div class="content md:table-cell md:h-full md:align-middle">
         <div class="brand md:w-full md:mx-auto">
           <nuxt-link to="/" class="m-0 border-none"> <!-- <img/> --></nuxt-link>
@@ -79,13 +81,12 @@
   </aside>
 </template>
 
-
 <style lang="postcss" scoped>
 aside {
   .background-img {
     &:before {
       @apply inset-0 absolute;
-      content: "";
+      content: '';
       background: linear-gradient(
         to bottom,
         rgba(17, 17, 17, 0) 0,

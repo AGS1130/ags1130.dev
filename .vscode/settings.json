@@ -1,4 +1,6 @@
 {
+  "css.validate": false, // Disable css built-in lint
+  "stylelint.enable": true, // Enable sytlelint
   "files.exclude": {
     ".nuxt": true,
     "node_modules": true
