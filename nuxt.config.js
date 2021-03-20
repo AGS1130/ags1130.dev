@@ -1,5 +1,12 @@
 export default {
   target: "static",
+  head: {
+    titleTemplate: "AGS1130 | %s",
+    meta: [
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+    ],
+  },
   components: {
     dirs: ["~/components/global", "~/components/view"],
   },
