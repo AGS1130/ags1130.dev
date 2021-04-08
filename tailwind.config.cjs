@@ -1,7 +1,10 @@
-const { getColors } = require('./utils/theme-colors');
+const { getColors } = require('./utils/theme-colors.cjs');
+
+// It works ಠ_ಠ
+// console.log(getColors('#AA0000'))
 
 module.exports = {
-  purge: [],
+  purge: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     colors: {
       /* Base Colors */

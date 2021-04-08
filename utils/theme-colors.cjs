@@ -32,7 +32,7 @@ const withTint = (intensity) => (hex) => tint(hex, intensity);
 
 const withShade = (intensity) => (hex) => shade(hex, intensity);
 
-export const _variants = {
+const _variants = {
   50: withTint(0.95),
   100: withTint(0.9),
   200: withTint(0.75),
@@ -45,11 +45,11 @@ export const _variants = {
   900: withShade(0.3)
 };
 
-export function getColors(color, variants = _variants) {
+exports.getColors = function (color, variants = _variants) {
   const colors = {};
   const components = parseColor(color);
   for (const [name, fn] of Object.entries(variants)) {
     colors[name] = hexValue(fn(components));
   }
   return colors;
-}
+};
