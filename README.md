@@ -2,4 +2,4 @@
 
 ## Running the Site
 
-Nuked the project. Standby 🛑
+Run `npm run dev` to get started in localhost.

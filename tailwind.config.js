@@ -1,4 +1,4 @@
-const { getColors } = require('theme-colors')
+const { getColors } = require('./utils/theme-colors');
 
 module.exports = {
   purge: [],
@@ -43,4 +43,4 @@ module.exports = {
     // borderColor: ["dark", "dark-focus"],
     // textColor: ["dark", "dark-hover", "dark-active"],
   }
-}
+};
