@@ -4,6 +4,7 @@ const { getColors } = require('./utils/theme-colors.cjs');
 // console.log(getColors('#AA0000'))
 
 module.exports = {
+  mode: 'jit',
   purge: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     colors: {

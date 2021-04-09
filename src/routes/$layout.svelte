@@ -1,5 +1,5 @@
-<script>
-  import '../app.css';
+<script lang="ts">
+  import '../app.postcss';
 
   // Would be nice if this were extensible `$layouts` 😞
   // https://kit.svelte.dev/docs#configuration-files
