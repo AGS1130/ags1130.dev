@@ -7,7 +7,7 @@
   "bracketSpacing": true,
   "proseWrap": "preserve",
   "printWidth": 120,
-  "svelteSortOrder": "styles-scripts-markup",
+  "svelteSortOrder": "options-scripts-markup-styles",
   "svelteStrictMode": true,
   "svelteBracketNewLine": true,
   "svelteAllowShorthand": true,

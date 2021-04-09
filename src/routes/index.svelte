@@ -2,23 +2,22 @@
   import Counter from '$lib/Counter.svelte';
 </script>
 
-<main>
+<section>
   <h1>Hello world!</h1>
 
   <Counter />
 
   <p>Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte apps.</p>
-</main>
+</section>
 
-<style>
-  main {
-    text-align: center;
-    padding: 1em;
-    margin: 0 auto;
+<style lang="postcss">
+  section {
+    @apply text-center p-4 my-0 mx-auto;
   }
 
   h1 {
-    color: #ff3e00;
+    @apply text-orange-500;
+
     text-transform: uppercase;
     font-size: 4rem;
     font-weight: 100;
