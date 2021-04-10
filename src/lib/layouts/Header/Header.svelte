@@ -10,7 +10,7 @@
 
 <style lang="postcss">
   header {
-    @apply m-0 p-3 top-0 w-full z-10 flex flex-row bg-black md:hidden;
+    @apply m-0 p-8 top-0 w-full z-10 flex flex-row bg-black;
 
     h1 {
       @apply m-auto;
@@ -18,6 +18,10 @@
       a {
         @apply text-white;
       }
+    }
+
+    @media (min-width: 800px) {
+      display: none;
     }
   }
 </style>

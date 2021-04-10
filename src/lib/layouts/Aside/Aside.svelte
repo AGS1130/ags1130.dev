@@ -5,9 +5,9 @@
 
 <aside>
   <div>
-    <Bio/>
+    <Bio />
     <!-- <SocialLinks/> -->
-    <Nav/>
+    <Nav />
     <div>
       <!-- <Tags/> -->
       Aside
@@ -17,6 +17,8 @@
 
 <style lang="postcss">
   aside {
+    @apply p-8 border-r-2;
+
     transition: transform 0.3s ease-in-out;
 
     > div {

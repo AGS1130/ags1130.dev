@@ -14,6 +14,6 @@
 
 <style lang="postcss">
   footer {
-    @apply text-center py-8 px-0;
+    @apply text-center py-8 px-0 border-t-2;
   }
 </style>
