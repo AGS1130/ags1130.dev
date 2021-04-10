@@ -1,4 +1,6 @@
 <script lang="ts">
+  import SocialLinks from '$lib/constants/SocialLinks.svelte';
+
   const thisYear = new Date().getFullYear();
 </script>
 
@@ -9,7 +11,7 @@
   <br />
   <a href="https://github.com/AGS1130/ags1130.dev">GitHub Repository</a>
   <br />
-  <!-- <SocialLinks/> -->
+  <SocialLinks />
 </footer>
 
 <style lang="postcss">

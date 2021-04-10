@@ -1,0 +1,16 @@
+<script lang="ts">
+  import { tags } from '$lib/utils/tags';
+  import Tag from './Tag.svelte';
+</script>
+
+<div class="tags">
+  {#each Object.entries(tags) as [tagName, { name, color, iconPath, gradient }] (tagName)}
+    <Tag tagName="{tagName}" name="{name}" color="{color}" gradient="{gradient}" iconPath="{iconPath}" />
+  {/each}
+</div>
+
+<style lang="postcss">
+  .tags {
+    @apply my-4;
+  }
+</style>

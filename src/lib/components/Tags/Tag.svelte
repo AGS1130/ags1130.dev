@@ -1,0 +1,51 @@
+<script lang="ts">
+  export let tagName, name, color, gradient, iconPath;
+
+  const colorNotWhite = color !== '#fff';
+  const fillColor = colorNotWhite ? '#fff' : '#000';
+</script>
+
+<button style="color: {fillColor}; background-color: {color}; background-image: {gradient};">
+  <a href="/tags/{tagName}">
+    <p>{name}</p>
+    <svg
+      role="img"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="32"
+      style="fill: {fillColor};"
+    >
+      <title>{name} Icon</title>
+      <path d="{iconPath}"></path>
+    </svg>
+  </a>
+</button>
+
+<style lang="postcss">
+  button {
+    @apply border-none text-sm text-center uppercase overflow-hidden relative rounded-md p-2 m-2;
+
+    background-size: 110% auto;
+    transform: translate3d(0, 0, 0);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.26);
+    transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &:active,
+    &:focus,
+    &:hover {
+      @apply outline-none;
+
+      transform: translate3d(0, -1px, 0);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    > a {
+      @apply inline-flex;
+
+      > * {
+        @apply mx-2 my-auto;
+      }
+    }
+  }
+</style>
