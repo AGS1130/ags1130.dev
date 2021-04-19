@@ -8,9 +8,3 @@
     <Tag tagName="{tagName}" name="{name}" color="{color}" gradient="{gradient}" iconPath="{iconPath}" />
   {/each}
 </div>
-
-<style lang="postcss">
-  .tags {
-    @apply my-4;
-  }
-</style>

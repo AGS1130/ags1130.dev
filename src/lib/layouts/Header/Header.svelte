@@ -19,9 +19,11 @@
         @apply text-white;
       }
     }
+  }
 
-    @media (min-width: 800px) {
-      display: none;
+  @media (min-width: 800px) {
+    header {
+      @apply hidden;
     }
   }
 </style>

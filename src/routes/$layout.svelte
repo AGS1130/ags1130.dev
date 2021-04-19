@@ -20,11 +20,11 @@
     @apply grid;
 
     grid-template-columns: 1fr 3fr;
+  }
 
-    @media (max-width: 800px) {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
+  @media (max-width: 800px) {
+    main {
+      @apply flex flex-row justify-around;
     }
   }
 </style>

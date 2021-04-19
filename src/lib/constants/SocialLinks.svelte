@@ -35,7 +35,7 @@
 
 <style lang="postcss">
   .social-links {
-    @apply flex justify-center self-center w-full;
+    @apply flex justify-center self-center w-full my-6;
 
     a {
       @apply m-2;

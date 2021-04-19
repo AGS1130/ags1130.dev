@@ -1,7 +1,12 @@
-<!-- Custom Error Page -->
-<!-- https://kit.svelte.dev/docs#layouts-error-pages -->
+<script lang="ts">
+  import Tags from '$lib/components/Tags/Tags.svelte';
+</script>
+
 <section>
-  <h1>Error</h1>
+  <h1>Tags</h1>
+
+  <p>For all tags available in website</p>
+  <Tags />
 </section>
 
 <style lang="postcss">
@@ -20,8 +25,18 @@
     max-width: 14rem;
   }
 
+  p {
+    max-width: 14rem;
+    margin: 2rem auto;
+    line-height: 1.35;
+  }
+
   @media (min-width: 480px) {
     h1 {
+      max-width: none;
+    }
+
+    p {
       max-width: none;
     }
   }
