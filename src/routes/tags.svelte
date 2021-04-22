@@ -2,18 +2,12 @@
   import Tags from '$lib/components/Tags/Tags.svelte';
 </script>
 
-<section>
-  <h1>Tags</h1>
+<h1>Tags</h1>
 
-  <p>For all tags available in website</p>
-  <Tags />
-</section>
+<p>For all tags available in website</p>
+<Tags />
 
 <style lang="postcss">
-  section {
-    @apply text-center p-4 my-0 mx-auto;
-  }
-
   h1 {
     @apply text-orange-500;
 

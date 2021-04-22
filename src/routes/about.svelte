@@ -1,14 +1,8 @@
-<section>
-  <h1>About</h1>
+<h1>About</h1>
 
-  <p>Say something a little about me.</p>
-</section>
+<p>Say something a little about me.</p>
 
 <style lang="postcss">
-  section {
-    @apply text-center p-4 my-0 mx-auto;
-  }
-
   h1 {
     @apply text-orange-500;
 

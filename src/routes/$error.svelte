@@ -1,14 +1,9 @@
 <!-- Custom Error Page -->
 <!-- https://kit.svelte.dev/docs#layouts-error-pages -->
-<section>
-  <h1>Error</h1>
-</section>
+
+<h1>Error</h1>
 
 <style lang="postcss">
-  section {
-    @apply text-center p-4 my-0 mx-auto;
-  }
-
   h1 {
     @apply text-orange-500;
 

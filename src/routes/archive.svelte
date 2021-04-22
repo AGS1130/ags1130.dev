@@ -1,13 +1,8 @@
-<section>
-  <h1>Archive</h1>
+<h1>Archive</h1>
 
-  <p>For previously published articles</p>
-</section>
+<p>For previously published articles</p>
 
 <style lang="postcss">
-  section {
-    @apply text-center p-4 my-0 mx-auto;
-  }
 
   h1 {
     @apply text-orange-500;

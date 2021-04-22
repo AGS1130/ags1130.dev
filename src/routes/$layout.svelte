@@ -11,7 +11,9 @@
 <Header />
 <main>
   <Aside />
-  <slot />
+  <section>
+    <slot />
+  </section>
 </main>
 <Footer />
 
@@ -20,11 +22,19 @@
     @apply grid;
 
     grid-template-columns: 1fr 3fr;
+
+    section {
+      @apply text-center p-20 my-0 mx-auto;
+    }
   }
 
   @media (max-width: 800px) {
     main {
       @apply flex flex-row justify-around;
+
+      section {
+        @apply p-12;
+      }
     }
   }
 </style>
