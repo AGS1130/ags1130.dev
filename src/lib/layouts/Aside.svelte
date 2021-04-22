@@ -4,9 +4,11 @@
   import SocialLinks from '$lib/constants/SocialLinks.svelte';
   import Search from '$lib/components/Search/Search.svelte';
   import Tags from '$lib/components/Tags/Tags.svelte';
+
+  import { navMenu } from '$lib/controller/store';
 </script>
 
-<aside>
+<aside class="{$navMenu}">
   <Bio />
   <h1>AGS1130</h1>
   <SocialLinks />
@@ -36,7 +38,11 @@
       @apply absolute bg-white w-full z-50;
 
       /* Work with Svelte transitions */
-      transform: translateX(0);
+      transform: translateX(-100%);
+
+      &.open {
+        transform: translateX(0);
+      }
     }
   }
 </style>

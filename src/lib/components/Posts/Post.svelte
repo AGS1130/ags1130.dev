@@ -29,7 +29,7 @@
 
 <style lang="postcss">
   article {
-    @apply pb-8 mb-16;
+    @apply pb-8 mb-16 text-left;
 
     header {
       @apply mb-8;

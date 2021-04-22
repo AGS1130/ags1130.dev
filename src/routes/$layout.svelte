@@ -18,17 +18,25 @@
 <Footer />
 
 <style lang="postcss">
+  :global(h1) {
+    @apply text-7xl;
+  }
+
   main {
     @apply grid;
 
     grid-template-columns: 1fr 3fr;
 
     section {
-      @apply text-center p-20 my-0 mx-auto;
+      @apply text-center p-20 my-0 mx-auto max-w-4xl;
     }
   }
 
   @media (max-width: 800px) {
+    :global(h1) {
+      @apply text-4xl;
+    }
+
     main {
       @apply flex flex-row justify-around;
 

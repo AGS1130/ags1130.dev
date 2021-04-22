@@ -2,6 +2,7 @@
   import Post from './Post.svelte';
 </script>
 
-<div class="post-feed">
+<!-- The loop is to test the UI -->
+{#each { length: 3 } as _, i}
   <Post />
-</div>
+{/each}
