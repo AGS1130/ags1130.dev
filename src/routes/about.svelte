@@ -1,3 +1,8 @@
+<svelte:head>
+  <!-- Primary Meta Tags -->
+  <title>AGS1130 | About</title>
+</svelte:head>
+
 <h1>About</h1>
 
 <p>Say something a little about me.</p>

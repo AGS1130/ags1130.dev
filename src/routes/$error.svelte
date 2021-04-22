@@ -1,5 +1,9 @@
 <!-- Custom Error Page -->
 <!-- https://kit.svelte.dev/docs#layouts-error-pages -->
+<svelte:head>
+  <!-- Primary Meta Tags -->
+  <title>AGS1130 | Error</title>
+</svelte:head>
 
 <h1>Error</h1>
 

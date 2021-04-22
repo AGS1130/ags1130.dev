@@ -2,6 +2,11 @@
   import Tags from '$lib/components/Tags/Tags.svelte';
 </script>
 
+<svelte:head>
+  <!-- Primary Meta Tags -->
+  <title>AGS1130 | Tags</title>
+</svelte:head>
+
 <h1>Tags</h1>
 
 <p>For all tags available in website</p>

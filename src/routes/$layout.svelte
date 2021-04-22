@@ -6,7 +6,20 @@
   import Header from '$lib/layouts/Header/Header.svelte';
   import Aside from '$lib/layouts/Aside.svelte';
   import Footer from '$lib/layouts/Footer.svelte';
+
+  import { colorTheme } from '$lib/controller/store';
 </script>
+
+<svelte:head>
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/{$colorTheme}-mode/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/{$colorTheme}-mode/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/{$colorTheme}-mode/favicon-16x16.png" />
+  <link rel="manifest" href="/light-mode/site.webmanifest" />
+  <link rel="mask-icon" href="/light-mode/safari-pinned-tab.svg" color="#000000" />
+  <meta name="msapplication-TileColor" content="{$colorTheme === 'light' ? '#ffffff' : '#000000'}" />
+  <meta name="theme-color" content="{$colorTheme === 'light' ? '#ffffff' : '#000000'}" />
+</svelte:head>
 
 <Header />
 <main>
