@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import { navMenu } from '$lib/controller/store';
 
   const links = [
     { name: 'Home', url: '/' },
@@ -10,11 +11,12 @@
   let currentPath = '';
 
   page.subscribe(({ path }) => (currentPath = path));
+  const toggleNav = () => ($navMenu = $navMenu === 'close' ? 'open' : 'close');
 </script>
 
 <nav>
   {#each links as { name, url }}
-    <a href="{url}" class:active="{currentPath === url}">{name}</a>
+    <a href="{url}" class:active="{currentPath === url}" on:click="{toggleNav}">{name}</a>
   {/each}
 </nav>
 

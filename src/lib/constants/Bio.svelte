@@ -1,5 +1,11 @@
+<script lang="ts">
+  import { navMenu } from '$lib/controller/store';
+
+  const toggleNav = () => ($navMenu = $navMenu === 'close' ? 'open' : 'close');
+</script>
+
 <div class="bio">
-  <a href="/">
+  <a href="/" on:click="{toggleNav}">
     <img src="/img/logo-black.svg" alt="Vanity URL" />
   </a>
 </div>
