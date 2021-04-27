@@ -42,9 +42,5 @@ module.exports = {
       '2xl': '1500px'
     }
   },
-  variants: {
-    // backgroundColor: ["dark", "dark-hover", "hover"],
-    // borderColor: ["dark", "dark-focus"],
-    // textColor: ["dark", "dark-hover", "dark-active"],
-  }
+  darkMode: 'class'
 };

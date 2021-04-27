@@ -1,6 +1,7 @@
 <script lang="ts">
   import Bio from '$lib/constants/Bio.svelte';
   import Nav from '$lib/constants/Nav.svelte';
+  import ToggleColorTheme from '$lib/components/ToggleColorTheme.svelte';
   import SocialLinks from '$lib/constants/SocialLinks.svelte';
   import Search from '$lib/components/Search/Search.svelte';
   import Tags from '$lib/components/Tags/Tags.svelte';
@@ -11,6 +12,7 @@
 <aside class="{$navMenu}">
   <Bio />
   <h1>AGS1130</h1>
+  <ToggleColorTheme />
   <SocialLinks />
   <Nav />
   <Search />

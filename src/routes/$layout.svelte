@@ -1,5 +1,6 @@
 <script lang="ts">
   import '../app.postcss';
+  import { onMount } from 'svelte';
 
   // Would be nice if this were extensible `$layouts` 😞
   // https://kit.svelte.dev/docs#configuration-files
@@ -8,6 +9,10 @@
   import Footer from '$lib/layouts/Footer.svelte';
 
   import { colorTheme } from '$lib/controller/store';
+
+  onMount(() => {
+    $colorTheme === 'dark' && document.querySelector('html').classList.add('dark');
+  });
 </script>
 
 <svelte:head>
@@ -15,8 +20,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/{$colorTheme}-mode/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/{$colorTheme}-mode/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/{$colorTheme}-mode/favicon-16x16.png" />
-  <link rel="manifest" href="/light-mode/site.webmanifest" />
-  <link rel="mask-icon" href="/light-mode/safari-pinned-tab.svg" color="#000000" />
+  <link rel="manifest" href="/{$colorTheme}-mode/site.webmanifest" />
+  <link rel="mask-icon" href="/{$colorTheme}-mode/safari-pinned-tab.svg" color="#000000" />
   <meta name="msapplication-TileColor" content="{$colorTheme === 'light' ? '#ffffff' : '#000000'}" />
   <meta name="theme-color" content="{$colorTheme === 'light' ? '#ffffff' : '#000000'}" />
 </svelte:head>

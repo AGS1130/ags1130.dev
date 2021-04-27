@@ -1,14 +1,15 @@
 {
+  "start_url": "/",
   "name": "AGS1130",
   "short_name": "AGS1130",
   "icons": [
     {
-      "src": "./android-chrome-192x192.png",
+      "src": "/light-mode/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "./android-chrome-512x512.png",
+      "src": "/light-mode/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
