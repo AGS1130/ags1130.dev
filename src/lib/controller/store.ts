@@ -17,6 +17,6 @@ export function localStore(key: string, value: string): Writable<string> {
   return store;
 }
 
-export const colorTheme = localStore('theme', 'dark');
+export const colorTheme = localStore('theme', 'light');
 
 export const navMenu = writable('close');

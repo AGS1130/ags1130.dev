@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { navMenu } from '$lib/controller/store';
+  import { colorTheme, navMenu } from '$lib/controller/store';
 
   const toggleNav = () => ($navMenu = $navMenu === 'close' ? 'open' : 'close');
 </script>
 
 <div class="bio">
   <a href="/" on:click="{toggleNav}">
-    <img src="/img/logo-black.svg" alt="Vanity URL" />
+    <img src="/img/logo-{$colorTheme === 'dark' ? 'white' : 'black'}.svg" alt="AGS1130 Logo" />
   </a>
 </div>
 
