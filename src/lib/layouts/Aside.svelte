@@ -37,7 +37,7 @@
 
   @media (max-width: 800px) {
     aside {
-      @apply absolute bg-white w-full z-50;
+      @apply absolute border-r-0 w-full z-50;
 
       /* Work with Svelte transitions */
       transform: translateX(-100%);

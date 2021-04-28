@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { colorTheme } from '$lib/controller/store';
+
   const links = [
     {
       name: 'Twitter',
@@ -25,9 +27,15 @@
   {#each links as { name, url, iconPath }}
     <a href="{url}" target="_blank">
       <span title="{name}">
-        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-          ><title>{name} Icon</title><path d="{iconPath}"></path></svg
+        <svg
+          role="img"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="{$colorTheme === 'dark' ? '#ffffff' : '#000000'}"
         >
+          <title>{name} Icon</title>
+          <path d="{iconPath}"></path>
+        </svg>
       </span>
     </a>
   {/each}
@@ -43,6 +51,13 @@
       svg {
         width: 26px;
         height: 26px;
+        transition: all 0.3s linear;
+      }
+
+      &:hover {
+        svg {
+          @apply fill-current text-primary-500;
+        }
       }
     }
   }

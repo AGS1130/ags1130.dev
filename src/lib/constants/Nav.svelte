@@ -26,9 +26,9 @@
 
     a {
       &::after {
-        content: "";
+        content: '';
 
-        @apply block bg-black h-0.5 w-0 transition-all ease-in-out;
+        @apply block bg-primary-500 h-0.5 w-0 transition-all duration-300 ease-in-out;
       }
 
       &:hover::after {

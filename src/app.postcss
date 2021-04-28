@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* purge start ignore */
+html {
+  @apply bg-white text-black;
+
+  aside {
+    @apply bg-white;
+  }
+
+  &.dark {
+    @apply bg-black text-white;
+
+    aside {
+      @apply bg-black;
+    }
+  }
+}
+
+/* purge end ignore */
