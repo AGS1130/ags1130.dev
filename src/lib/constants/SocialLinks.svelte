@@ -49,9 +49,10 @@
       @apply m-2;
 
       svg {
+        @apply transition-all duration-300 ease-linear;
+
         width: 26px;
         height: 26px;
-        transition: all 0.3s linear;
       }
 
       &:hover {

@@ -22,12 +22,10 @@
 
 <style lang="postcss">
   aside {
-    @apply p-8 border-r-2;
-
-    transition: transform 0.3s ease-in-out;
+    @apply p-8 border-r-2 transition-all duration-300 ease-linear;
 
     h1 {
-      @apply text-center my-6;
+      @apply text-center;
     }
 
     h4 {

@@ -4,7 +4,201 @@
 
 /* purge start ignore */
 html {
-  @apply bg-white text-black;
+  @apply bg-white text-black font-body transition-all duration-300 ease-linear;
+
+  a,
+  small {
+    font-family: 'Poppins';
+  }
+
+  h1,
+  img {
+    padding: 0;
+    margin-bottom: 1.45rem;
+  }
+
+  h1 {
+    margin: 0 0 0.67em;
+    color: inherit;
+    font-family: 'Asap';
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    font-size: 2.25rem;
+    line-height: 1.1;
+  }
+
+  small {
+    font-size: 80%;
+  }
+
+  img {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    border-style: none;
+  }
+
+  figure {
+    margin: 1em 40px;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font: inherit;
+    margin: 0;
+    font-family: 'Poppins';
+  }
+
+  b,
+  strong {
+    font-weight: 700;
+  }
+
+  fieldset {
+    border: 1px solid silver;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1.45rem;
+  }
+
+  legend {
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  textarea {
+    overflow: auto;
+  }
+
+  ::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 0.54;
+  }
+
+  ::-webkit-file-upload-button {
+    font: inherit;
+  }
+
+  h2 {
+    font-size: 1.62671rem;
+    padding: 0;
+    color: inherit;
+    font-family: 'Asap';
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    line-height: 1.1;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: 0;
+    color: inherit;
+    font-family: 'Asap';
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    line-height: 1.1;
+  }
+
+  h3 {
+    font-size: 1.38316rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 0.85028rem;
+  }
+
+  h6 {
+    font-size: 0.78405rem;
+  }
+
+  figure,
+  p {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: 1.45rem;
+    font-family: 'Poppins';
+  }
+
+  ol,
+  ul {
+    margin-left: 1.45rem;
+    margin-right: 0;
+    padding: 0;
+    list-style-position: outside;
+    list-style-image: none;
+  }
+
+  blockquote,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ol,
+  pre,
+  table,
+  ul {
+    margin-top: 0;
+    margin-bottom: 1.45rem;
+  }
+
+  pre {
+    font-size: 0.85rem;
+    line-height: 1.42;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 3px;
+    overflow: auto;
+    word-wrap: normal;
+    padding: 1.45rem;
+  }
+
+  blockquote,
+  table {
+    padding: 0;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  pre {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  blockquote {
+    margin-left: 1.45rem;
+    margin-right: 1.45rem;
+  }
+
+  li {
+    margin-bottom: calc(1.45rem / 2);
+
+    > p {
+      margin-bottom: calc(1.45rem / 2);
+    }
+  }
+
+  ol li,
+  ul li {
+    padding-left: 0;
+    font-family: 'Poppins';
+  }
 
   aside {
     @apply bg-white;

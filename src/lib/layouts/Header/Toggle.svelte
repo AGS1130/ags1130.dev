@@ -19,9 +19,8 @@
     }
 
     span {
-      @apply relative w-8 h-1 rounded-xl bg-white;
+      @apply relative w-8 h-1 rounded-xl bg-white transition-all duration-300 ease-linear;
 
-      transition: all 0.3s linear;
       transform-origin: 1px;
 
       &:first-child {
