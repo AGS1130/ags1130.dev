@@ -6,7 +6,7 @@
 
   // CSS Inline Style Hack for Light/Dark Mode Color Theme
   // Honestly, this is bad code, and no one should do this 💩
-  $: fillColor = $colorTheme === 'dark' ? '#fff' : colorNotWhite ? '#fff' : '#000';
+  $: fillColor = $colorTheme === 'dark' ? color : colorNotWhite ? '#fff' : '#000';
   $: bgImage = `background-image: ${$colorTheme === 'dark' ? 'linear-gradient(#000, #000),' + gradient : gradient};`;
   $: darkModeBackground =
     $colorTheme === 'dark' ? 'background-origin: border-box; background-clip: content-box, border-box;' : '';
