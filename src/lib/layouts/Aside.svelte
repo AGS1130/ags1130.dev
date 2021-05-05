@@ -25,7 +25,7 @@
     @apply p-8 border-r-2 transition-all duration-300 ease-linear;
 
     h1 {
-      @apply text-center;
+      @apply text-center my-6;
     }
 
     h4 {
