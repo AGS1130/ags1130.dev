@@ -1,11 +1,18 @@
 <script lang="ts">
+  import { colorTheme } from '$lib/controller/store';
   export let tagName, name, color, gradient, iconPath;
 
   const colorNotWhite = color !== '#fff';
-  const fillColor = colorNotWhite ? '#fff' : '#000';
+
+  // CSS Inline Style Hack for Light/Dark Mode Color Theme
+  // Honestly, this is bad code, and no one should do this 💩
+  $: fillColor = $colorTheme === 'dark' ? '#fff' : colorNotWhite ? '#fff' : '#000';
+  $: bgImage = `background-image: ${$colorTheme === 'dark' ? 'linear-gradient(#000, #000),' + gradient : gradient};`;
+  $: darkModeBackground =
+    $colorTheme === 'dark' ? 'background-origin: border-box; background-clip: content-box, border-box;' : '';
 </script>
 
-<button style="color: {fillColor}; background-color: {color}; background-image: {gradient};">
+<button style="color: {fillColor}; background-color: {color}; {bgImage} {darkModeBackground}">
   <a href="/tags/{tagName}">
     <p>{name}</p>
     <svg
@@ -24,7 +31,7 @@
 
 <style lang="postcss">
   button {
-    @apply border-none text-sm text-center uppercase overflow-hidden relative rounded-md p-2 m-2;
+    @apply text-sm text-center uppercase overflow-hidden relative rounded-md p-2 m-2;
 
     background-size: 110% auto;
     transform: translate3d(0, 0, 0);
