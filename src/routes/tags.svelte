@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Tags from '$lib/components/Tags/Tags.svelte';
+  import Tags from '$lib/components/Tags.svelte';
 </script>
 
 <svelte:head>

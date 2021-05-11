@@ -1,5 +1,5 @@
 <script lang="ts">
-  import SocialLinks from '$lib/constants/SocialLinks.svelte';
+  import SocialLinks from '$lib/components/SocialLinks.svelte';
 
   const thisYear = new Date().getFullYear();
 </script>
