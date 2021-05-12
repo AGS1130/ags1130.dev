@@ -1,5 +1,5 @@
 <!-- The loop is to test the UI -->
-{#each { length: 3 } as _, i}
+{#each { length: 5 } as _, i}
   <article>
     <header>
       <h2>

@@ -1,6 +1,7 @@
 <script lang="ts">
   import '../app.postcss';
   import { onMount } from 'svelte';
+  import { fade } from 'svelte/transition';
 
   // Would be nice if this were extensible `$layouts` 😞
   // https://kit.svelte.dev/docs#configuration-files

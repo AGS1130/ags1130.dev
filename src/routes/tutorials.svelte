@@ -1,14 +1,13 @@
 <svelte:head>
-  <!-- Primary Meta Tags -->
-  <title>AGS1130 | Archive</title>
+  <!-- Primary Meta Tutorials -->
+  <title>AGS1130 | Tutorials</title>
 </svelte:head>
 
-<h1>Archive</h1>
+<h1>Tutorials</h1>
 
-<p>For previously published articles</p>
+<p>This is where all the full tutorials will live.</p>
 
 <style lang="postcss">
-
   h1 {
     @apply text-orange-500;
 

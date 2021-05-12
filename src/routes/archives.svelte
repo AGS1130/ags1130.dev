@@ -1,18 +1,14 @@
-<script lang="ts">
-  import Tags from '$lib/components/Tags.svelte';
-</script>
-
 <svelte:head>
-  <!-- Primary Meta Tags -->
-  <title>AGS1130 | Tags</title>
+  <!-- Primary Meta Archives -->
+  <title>AGS1130 | Archives</title>
 </svelte:head>
 
-<h1>Tags</h1>
+<h1>Archives</h1>
 
-<p>For all tags available in website</p>
-<Tags />
+<p>For all previously published articles</p>
 
 <style lang="postcss">
+
   h1 {
     @apply text-orange-500;
 
