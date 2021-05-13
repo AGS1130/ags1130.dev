@@ -15,17 +15,17 @@
     $colorTheme = $colorTheme === 'dark' ? 'light' : 'dark';
     document.querySelector('html').classList.toggle('dark');
   };
+
 </script>
 
 <aside class="{$navMenu}">
   <div class="sticky-scrollable">
-    <div class="bio">
-      <a href="/" on:click="{toggleNav}">
+    <div class="logo-wrapper">
+      <a href="/" on:click="{toggleNav}" class="logo">
         <img src="/img/logo-{$colorTheme === 'dark' ? 'white' : 'black'}.svg" alt="AGS1130 Logo" />
       </a>
     </div>
     <h1>AGS1130</h1>
-    <button on:click="{toggleTheme}"> Toggle Theme </button>
     <SocialLinks />
     <nav>
       {#each navLinks as { name, url }}
@@ -33,6 +33,10 @@
       {/each}
     </nav>
     <input type="search" placeholder="Search" />
+    <h4>Toggle Theme</h4>
+    <button on:click="{toggleTheme}" class="toggle-theme {$colorTheme}">
+      <div class="indicator"></div>
+    </button>
     <h4>Popular Tags</h4>
     <Tags />
   </div>
@@ -45,7 +49,7 @@
     .sticky-scrollable {
       @apply sticky top-0 bottom-0 overflow-y-scroll;
 
-      .bio {
+      .logo-wrapper {
         @apply m-auto rounded-full text-center;
 
         width: 240px;
@@ -63,7 +67,7 @@
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
         }
 
-        > a {
+        .logo {
           @apply outline-none;
 
           > img {
@@ -77,6 +81,53 @@
 
       h1 {
         @apply text-center my-6;
+      }
+
+      .toggle-theme {
+        @apply w-28 h-4 px-2 py-6 flex relative items-center outline-none overflow-hidden m-auto rounded-full transition-all duration-300 ease-linear;
+
+        box-shadow: 3px 3px 20px -6px rgb(0 0 0 / 50%);
+
+        .indicator {
+          @apply p-4 rounded-full relative border-none bg-white transition-all duration-300 ease-linear;
+
+          transform: translateX(0);
+
+          &::before {
+            @apply block absolute w-full h-full rounded-full bg-primary-500 origin-top transition-all duration-300 ease-linear;
+
+            content: '';
+            left: -100%;
+            transform: translateX(0);
+          }
+        }
+
+        &.dark {
+          @apply bg-indigo-600;
+
+          .indicator {
+            @apply bg-gradient-to-t from-teal-400 via-teal-700 to-indigo-800;
+
+            transform: translateX(200%) rotate(25deg);
+            &::before {
+              @apply bg-indigo-600;
+
+              transform: translateX(113%) rotate(90deg);
+            }
+          }
+        }
+
+        &.light {
+          @apply bg-primary-500;
+
+          .indicator {
+            @apply bg-gradient-to-t from-pink-600 via-orange-600 to-yellow-500;
+
+            &::before {
+              @apply bg-primary-500;
+            }
+          }
+        }
       }
 
       nav {
@@ -121,4 +172,5 @@
       }
     }
   }
+
 </style>
