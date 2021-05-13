@@ -28,7 +28,7 @@ module.exports = {
       primary: getColors('#AA0000'),
       secondary: getColors('#B3995D'),
       light: getColors('#FFFFFF'),
-      dark: getColors('#000000')
+      dark: getColors('#121212')
     },
     fontFamily: {
       heading: 'Asap',

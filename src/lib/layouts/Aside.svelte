@@ -18,7 +18,7 @@
 
 </script>
 
-<aside class="{$navMenu}">
+<aside class="{$navMenu} {$colorTheme}">
   <div class="sticky-scrollable">
     <div class="logo-wrapper">
       <a href="/" on:click="{toggleNav}" class="logo">
@@ -32,9 +32,9 @@
         <a href="{url}" class="link" class:active="{currentPath === url}" on:click="{toggleNav}">{name}</a>
       {/each}
     </nav>
-    <input type="search" placeholder="Search" />
+    <input type="text" placeholder="Search" />
     <h4>Toggle Theme</h4>
-    <button on:click="{toggleTheme}" class="toggle-theme {$colorTheme}">
+    <button on:click="{toggleTheme}" class="toggle-theme">
       <div class="indicator"></div>
     </button>
     <h4>Popular Tags</h4>
@@ -101,33 +101,6 @@
             transform: translateX(0);
           }
         }
-
-        &.dark {
-          @apply bg-indigo-600;
-
-          .indicator {
-            @apply bg-gradient-to-t from-teal-400 via-teal-700 to-indigo-800;
-
-            transform: translateX(200%) rotate(25deg);
-            &::before {
-              @apply bg-indigo-600;
-
-              transform: translateX(113%) rotate(90deg);
-            }
-          }
-        }
-
-        &.light {
-          @apply bg-primary-500;
-
-          .indicator {
-            @apply bg-gradient-to-t from-pink-600 via-orange-600 to-yellow-500;
-
-            &::before {
-              @apply bg-primary-500;
-            }
-          }
-        }
       }
 
       nav {
@@ -137,7 +110,7 @@
           &::after {
             content: '';
 
-            @apply block bg-primary-500 h-0.5 w-0 transition-all duration-300 ease-in-out;
+            @apply block h-0.5 w-0 transition-all duration-300 ease-in-out;
           }
 
           &:hover::after {
@@ -151,11 +124,71 @@
       }
 
       input {
-        @apply w-full my-6 h-10;
+        @apply w-full my-6 h-10 pl-2 outline-none;
       }
 
       h4 {
         @apply my-6;
+      }
+    }
+
+    &.dark {
+      .logo-wrapper {
+        @apply bg-black;
+      }
+
+      nav .link {
+        &::after {
+          @apply bg-white;
+        }
+      }
+
+      input {
+        @apply bg-white text-black;
+      }
+
+      .toggle-theme {
+        @apply bg-blue-900;
+
+        .indicator {
+          @apply bg-gradient-to-t from-teal-400 via-teal-700 to-indigo-800;
+
+          transform: translateX(200%) rotate(25deg);
+
+          &::before {
+            @apply bg-blue-900;
+
+            transform: translateX(113%) rotate(90deg);
+          }
+        }
+      }
+    }
+
+    &.light {
+      .logo-wrapper {
+        @apply bg-white;
+      }
+
+      nav .link {
+        &::after {
+          @apply bg-black;
+        }
+      }
+
+      input {
+        @apply bg-black text-white;
+      }
+
+      .toggle-theme {
+        @apply bg-primary-500;
+
+        .indicator {
+          @apply bg-gradient-to-t from-pink-600 via-orange-600 to-yellow-500;
+
+          &::before {
+            @apply bg-primary-500;
+          }
+        }
       }
     }
   }

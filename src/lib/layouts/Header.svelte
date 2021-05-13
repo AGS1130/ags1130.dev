@@ -2,6 +2,7 @@
   import { navMenu } from '$lib/data/store';
 
   const toggleNav = () => ($navMenu = $navMenu === 'close' ? 'open' : 'close');
+
 </script>
 
 <header>
@@ -10,7 +11,7 @@
     <span></span>
     <span></span>
   </button>
-  <h1><a href="/">AGS1130</a></h1>
+  <a href="/"><h1>AGS1130</h1></a>
 </header>
 
 <style lang="postcss">
@@ -18,7 +19,7 @@
     @apply m-0 p-8 top-0 w-full z-10 flex flex-row bg-black;
 
     button {
-      @apply flex flex-col justify-around my-auto cursor-pointer p-0 bg-transparent border-none z-10 h-8;
+      @apply flex flex-col justify-around my-auto cursor-pointer h-8;
 
       &:focus {
         outline: none;
@@ -61,11 +62,11 @@
       }
     }
 
-    h1 {
-      @apply m-auto;
+    a {
+      @apply text-white m-auto;
 
-      a {
-        @apply text-white;
+      h1 {
+        @apply m-auto;
       }
     }
   }
@@ -75,4 +76,5 @@
       @apply hidden;
     }
   }
+
 </style>

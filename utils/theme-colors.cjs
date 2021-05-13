@@ -1,7 +1,5 @@
 const parseColor = (color = '') => {
-  if (typeof color !== 'string') {
-    throw new TypeError('Color should be string!');
-  }
+  if (typeof color !== 'string') throw new TypeError('Color should be string!');
 
   const hexMatch = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(color);
   if (hexMatch) {
@@ -33,7 +31,6 @@ const withTint = (intensity) => (hex) => tint(hex, intensity);
 const withShade = (intensity) => (hex) => shade(hex, intensity);
 
 const _variants = {
-  50: withTint(0.95),
   100: withTint(0.9),
   200: withTint(0.75),
   300: withTint(0.6),

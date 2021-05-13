@@ -1,7 +1,6 @@
 <script lang="ts">
   import '../app.postcss';
   import { onMount } from 'svelte';
-  import { fade } from 'svelte/transition';
 
   // Would be nice if this were extensible `$layouts` 😞
   // https://kit.svelte.dev/docs#configuration-files
@@ -9,11 +8,12 @@
   import Aside from '$lib/layouts/Aside.svelte';
   import Footer from '$lib/layouts/Footer.svelte';
 
-  import { colorTheme } from '$lib/data/store';
+  import { navMenu, colorTheme } from '$lib/data/store';
 
   onMount(() => {
     $colorTheme === 'dark' && document.querySelector('html').classList.add('dark');
   });
+
 </script>
 
 <svelte:head>
@@ -30,7 +30,7 @@
 <Header />
 <main>
   <Aside />
-  <section>
+  <section class="{$navMenu}">
     <slot />
   </section>
 </main>
@@ -57,11 +57,20 @@
     }
 
     main {
-      @apply flex flex-row justify-around;
+      @apply flex;
 
       section {
-        @apply p-12;
+        @apply p-12 transition-opacity delay-100 ease-linear;
+
+        &.open {
+          @apply opacity-0;
+        }
+
+        &.close {
+          @apply opacity-100;
+        }
       }
     }
   }
+
 </style>

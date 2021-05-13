@@ -34,12 +34,6 @@
         width: 26px;
         height: 26px;
       }
-
-      &:hover {
-        svg {
-          @apply fill-current text-primary-500;
-        }
-      }
     }
   }
 </style>
