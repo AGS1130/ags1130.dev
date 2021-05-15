@@ -148,7 +148,7 @@
       }
 
       .toggle-theme {
-        @apply bg-blue-900;
+        @apply bg-blue-700;
 
         .indicator {
           @apply bg-gradient-to-t from-teal-400 via-teal-700 to-indigo-800;
@@ -156,7 +156,7 @@
           transform: translateX(200%) rotate(25deg);
 
           &::before {
-            @apply bg-blue-900;
+            @apply bg-blue-700;
 
             transform: translateX(113%) rotate(90deg);
           }

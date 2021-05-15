@@ -1,5 +1,6 @@
 <script lang="ts">
-  import Posts from '$lib/components/Posts.svelte';
+  import Articles from '$lib/components/Articles.svelte';
+
 </script>
 
 <svelte:head>
@@ -7,4 +8,4 @@
   <title>AGS1130 | Home</title>
 </svelte:head>
 
-<Posts />
+<Articles />

@@ -16,10 +16,10 @@
 
 <style lang="postcss">
   header {
-    @apply m-0 p-8 top-0 w-full z-10 flex flex-row bg-black;
+    @apply m-0 p-8 top-0 w-full z-10 bg-black;
 
     button {
-      @apply flex flex-col justify-around my-auto cursor-pointer h-8;
+      @apply absolute flex flex-col justify-around cursor-pointer h-8;
 
       &:focus {
         outline: none;
@@ -63,7 +63,7 @@
     }
 
     a {
-      @apply text-white m-auto;
+      @apply text-white text-center m-auto;
 
       h1 {
         @apply m-auto;

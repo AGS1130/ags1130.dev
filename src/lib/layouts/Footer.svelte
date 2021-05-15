@@ -1,10 +1,12 @@
 <script lang="ts">
+  import { navMenu } from '$lib/data/store';
   import SocialLinks from '$lib/components/SocialLinks.svelte';
 
   const thisYear = new Date().getFullYear();
+
 </script>
 
-<footer>
+<footer class="{$navMenu}">
   &copy; {thisYear} Built by Gregory Salinas.
   <br />
   All rights reserved.
@@ -17,5 +19,10 @@
 <style lang="postcss">
   footer {
     @apply text-center py-8 px-0 border-t-2;
+
+    &.open {
+      @apply hidden;
+    }
   }
+
 </style>

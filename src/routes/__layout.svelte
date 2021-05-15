@@ -63,11 +63,7 @@
         @apply p-12 transition-opacity delay-100 ease-linear;
 
         &.open {
-          @apply opacity-0;
-        }
-
-        &.close {
-          @apply opacity-100;
+          @apply hidden;
         }
       }
     }

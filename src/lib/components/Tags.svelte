@@ -1,10 +1,14 @@
 <script lang="ts">
   import tags from '$lib/data/tags';
-  import { colorTheme } from '$lib/data/store';
+  import { colorTheme, navMenu } from '$lib/data/store';
+
+  const toggleNav = () => ($navMenu = $navMenu === 'close' ? 'open' : 'close');
+
 </script>
 
 {#each Object.entries(tags) as [tagName, { name, color, iconPath, gradient }] (tagName)}
   <button
+    on:click="{toggleNav}"
     style="color: {$colorTheme === 'dark'
       ? color
       : color !== '#fff'
@@ -32,7 +36,7 @@
 
 <style lang="postcss">
   button {
-    @apply text-sm text-center uppercase overflow-hidden relative rounded-md p-2 m-2;
+    @apply text-sm text-center uppercase overflow-hidden relative rounded-md p-2 mr-2 my-1;
 
     background-size: 110% auto;
     transform: translate3d(0, 0, 0);
@@ -56,4 +60,5 @@
       }
     }
   }
+
 </style>

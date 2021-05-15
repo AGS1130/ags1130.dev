@@ -1,8 +1,3 @@
-<script>
-  import Tags from '$lib/components/Tags.svelte';
-
-</script>
-
 <!-- The loop is to test the UI -->
 {#each { length: 5 } as _, i}
   <article>
@@ -11,10 +6,13 @@
         <a href="https://google.com" target="_blank">Google</a>
       </h2>
       <small>
-        Posted on
+        Published on
         <time>April 21, 2021</time>
       </small>
     </header>
+    <a href="https://google.com" target="_blank">
+      <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_160x56dp.png" alt="Google!" />
+    </a>
     <div>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, quidem excepturi aut aliquam ipsam fugiat!
@@ -22,11 +20,8 @@
       </p>
     </div>
     <a href="https://google.com" target="_blank">
-      <small>Read full post →</small>
+      <small>Keep reading →</small>
     </a>
-    <div>
-      <Tags />
-    </div>
   </article>
 {/each}
 
