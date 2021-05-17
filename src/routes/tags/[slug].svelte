@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import tags from '$lib/data/tags';
-  import Posts from '$lib/components/Posts.svelte';
+  import Articles from '$lib/components/Articles.svelte';
 
   let pageSlug = 'Tags';
   page.subscribe(({ params }) => {
@@ -17,4 +17,4 @@
   <title>AGS1130 | {pageSlug} Posts</title>
 </svelte:head>
 
-<Posts />
+<Articles />

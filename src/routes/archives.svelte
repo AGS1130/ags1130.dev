@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Posts from '$lib/components/Posts.svelte';
+  import Articles from '$lib/components/Articles.svelte';
 
 </script>
 
@@ -8,4 +8,4 @@
   <title>AGS1130 | Archives</title>
 </svelte:head>
 
-<Posts />
+<Articles />

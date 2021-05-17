@@ -8,4 +8,4 @@
   <title>AGS1130 | Tutorials</title>
 </svelte:head>
 
-<Articles />
+<Articles isFeatured="{true}" />

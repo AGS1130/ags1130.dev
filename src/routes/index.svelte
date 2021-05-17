@@ -8,4 +8,4 @@
   <title>AGS1130 | Home</title>
 </svelte:head>
 
-<Articles />
+<Articles isFeatured="{true}" />
