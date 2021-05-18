@@ -7,7 +7,7 @@
 
 <h1>Error</h1>
 
-<style lang="postcss">
+<style>
   h1 {
     @apply text-orange-500;
 
@@ -17,11 +17,5 @@
     line-height: 1.1;
     margin: 4rem auto;
     max-width: 14rem;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      max-width: none;
-    }
   }
 </style>

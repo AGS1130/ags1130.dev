@@ -1,8 +1,11 @@
 import sveltePreprocess from 'svelte-preprocess';
+import { windi } from 'svelte-windicss-preprocess';
 import adapterStatic from '@sveltejs/adapter-static';
 import { readFile } from 'fs/promises';
 
 const pkg = JSON.parse(await readFile(new URL('./package.json', import.meta.url)));
+const mode = process.env.NODE_ENV;
+const isProduction = mode === 'production';
 
 /** @type {import('@sveltejs/kit').Config} */
 export default {
@@ -13,13 +16,13 @@ export default {
   extensions: ['.svelte'],
   // options passed to svelte.preprocess (https://svelte.dev/docs#svelte_preprocess)
   preprocess: [
-    // Consult https://github.com/sveltejs/svelte-preprocess
-    // for more information about preprocessors
-    sveltePreprocess({
-      defaults: {
-        style: 'postcss'
-      },
-      postcss: true
+    sveltePreprocess(),
+    windi({
+      mode,
+      configPath: './windi.config.cjs',
+      useDevTools: {
+        enabled: isProduction
+      }
     })
   ],
   kit: {

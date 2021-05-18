@@ -1,6 +1,7 @@
 <script lang="ts">
   import { colorTheme } from '$lib/data/store';
   import socialLinks from '$lib/data/social';
+
 </script>
 
 <div class="social-links">
@@ -21,19 +22,20 @@
   {/each}
 </div>
 
-<style lang="postcss">
+<style>
   .social-links {
     @apply flex justify-center self-center w-full my-6;
-
-    a {
-      @apply m-2;
-
-      svg {
-        @apply transition-all duration-300 ease-linear;
-
-        width: 26px;
-        height: 26px;
-      }
-    }
   }
+
+  .social-links a {
+    @apply m-2;
+  }
+
+  .social-links a svg {
+    @apply transition-all duration-300 ease-linear;
+
+    width: 26px;
+    height: 26px;
+  }
+
 </style>

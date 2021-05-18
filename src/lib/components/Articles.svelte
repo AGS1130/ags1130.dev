@@ -41,21 +41,21 @@
   </article>
 {/each}
 
-<style lang="postcss">
+<style>
   article {
     @apply pb-8 mb-16 text-left;
+  }
 
-    header {
-      @apply mb-8;
+  article header {
+    @apply mb-8;
+  }
 
-      h2 {
-        @apply mb-3;
-      }
-    }
+  article header h2 {
+    @apply mb-3;
+  }
 
-    .tags {
-      @apply mb-6;
-    }
+  article .tags {
+    @apply mb-6;
   }
 
 </style>

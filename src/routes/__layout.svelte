@@ -1,5 +1,4 @@
 <script lang="ts">
-  import '../app.postcss';
   import { onMount } from 'svelte';
 
   // Would be nice if this were extensible `$layouts` 😞
@@ -36,36 +35,173 @@
 </main>
 <Footer />
 
-<style lang="postcss">
-  :global(h1) {
-    @apply text-7xl;
+<style global windi:preflights:global>
+  html {
+    @apply bg-white text-black font-body transition-all duration-300 ease-linear;
+  }
+
+  a,
+  small {
+    @apply font-body;
+  }
+
+  h1,
+  img {
+    @apply p-0 mb-6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-current font-bold;
+
+    text-rendering: optimizeLegibility;
+  }
+
+  h1 {
+    @apply text-4xl mb-3;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-base;
+  }
+
+  h5 {
+    @apply text-sm;
+  }
+
+  h6,
+  small {
+    @apply text-xs;
+  }
+
+  img {
+    @apply max-w-full border-none;
+  }
+
+  figure {
+    @apply mx-4 my-10;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    @apply font-body;
+  }
+
+  b,
+  strong {
+    @apply font-bold;
+  }
+
+  fieldset {
+    @apply p-0 mb-6 border border-solid border-gray-500;
+  }
+
+  legend {
+    @apply table max-w-full whitespace-normal;
+  }
+
+  textarea {
+    @apply overflow-auto;
+  }
+
+  ::-webkit-input-placeholder {
+    @apply text-current opacity-50;
+  }
+
+  ::-webkit-file-upload-button {
+    font: inherit;
+  }
+
+  figure,
+  p {
+    @apply mb-6 font-body;
+  }
+
+  ol,
+  ul {
+    @apply ml-6;
+  }
+
+  blockquote,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ol,
+  pre,
+  table,
+  ul {
+    @apply mb-6;
+  }
+
+  pre {
+    @apply p-6 text-sm overflow-auto rounded-sm bg-black bg-opacity-5;
+  }
+
+  blockquote {
+    @apply mx-6;
+  }
+
+  li {
+    @apply mb-3;
+
+    > p {
+      @apply mb-3;
+    }
+  }
+
+  ol li,
+  ul li {
+    @apply font-body;
+  }
+
+  aside {
+    @apply bg-white;
+  }
+
+  html.dark {
+    @apply bg-dark-900 text-white;
+  }
+
+  html.dark aside {
+    @apply bg-dark-900;
   }
 
   main {
-    @apply grid;
-
-    grid-template-columns: 1fr 3fr;
-
-    section {
-      @apply text-center p-20 my-0 mx-auto max-w-4xl;
-    }
+    @apply grid grid-cols-[1fr,3fr];
   }
 
-  @media (max-width: 800px) {
-    :global(h1) {
-      @apply text-4xl;
-    }
+  main section {
+    @apply text-center p-20 my-0 mx-auto max-w-4xl;
+  }
 
+  @screen <md {
     main {
       @apply flex;
+    }
 
-      section {
-        @apply p-12 transition-opacity delay-100 ease-linear;
+    main section {
+      @apply p-12 transition-opacity delay-100 ease-linear;
+    }
 
-        &.open {
-          @apply hidden;
-        }
-      }
+    main section.open {
+      @apply hidden;
     }
   }
 

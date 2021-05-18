@@ -16,13 +16,13 @@
   <SocialLinks />
 </footer>
 
-<style lang="postcss">
+<style>
   footer {
     @apply text-center py-8 px-0 border-t-2;
+  }
 
-    &.open {
-      @apply hidden;
-    }
+  footer.open {
+    @apply hidden;
   }
 
 </style>

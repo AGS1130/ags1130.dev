@@ -34,7 +34,7 @@
   </button>
 {/each}
 
-<style lang="postcss">
+<style>
   button {
     @apply text-sm text-center uppercase overflow-hidden relative rounded-md p-2 mr-2 my-1;
 
@@ -42,22 +42,22 @@
     transform: translate3d(0, 0, 0);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.26);
     transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
 
-    &:active,
-    &:focus,
-    &:hover {
-      @apply outline-none;
+  button:active,
+  button:focus,
+  button:hover {
+    @apply outline-none;
 
-      transform: translate3d(0, -1px, 0);
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
-    }
+    transform: translate3d(0, -1px, 0);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  }
 
-    > a {
-      @apply inline-flex;
+  button > a {
+    @apply inline-flex;
 
-      > * {
-        @apply mx-2 my-auto;
-      }
+    > * {
+      @apply mx-2 my-auto;
     }
   }
 

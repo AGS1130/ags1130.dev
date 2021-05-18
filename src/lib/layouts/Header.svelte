@@ -14,64 +14,60 @@
   <a href="/"><h1>AGS1130</h1></a>
 </header>
 
-<style lang="postcss">
+<style>
   header {
     @apply m-0 p-8 top-0 w-full z-10 bg-black;
-
-    button {
-      @apply absolute flex flex-col justify-around cursor-pointer h-8;
-
-      &:focus {
-        outline: none;
-      }
-
-      span {
-        @apply relative w-8 h-1 rounded-xl bg-white transition-all duration-300 ease-linear;
-
-        transform-origin: 1px;
-
-        &:first-child {
-          transform: rotate(0);
-        }
-
-        &:nth-child(2) {
-          opacity: 1;
-          transform: translateX(0);
-        }
-
-        &:nth-child(3) {
-          transform: rotate(0);
-        }
-      }
-
-      &.open {
-        span {
-          &:first-child {
-            transform: rotate(45deg);
-          }
-
-          &:nth-child(2) {
-            opacity: 0;
-            transform: translateX(20px);
-          }
-
-          &:nth-child(3) {
-            transform: rotate(-45deg);
-          }
-        }
-      }
-    }
-
-    a {
-      @apply text-white text-center m-auto;
-
-      h1 {
-        @apply m-auto;
-      }
-    }
   }
 
-  @media (min-width: 800px) {
+  header button {
+    @apply absolute flex flex-col justify-around cursor-pointer h-8;
+  }
+
+  header button:focus {
+    @apply outline-none;
+  }
+
+  header span {
+    @apply relative w-8 h-1 rounded-xl bg-white transition-all duration-300 ease-linear;
+
+    transform-origin: 1px;
+  }
+
+  header span:first-child {
+    transform: rotate(0);
+  }
+
+  header span:nth-child(2) {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  header span:nth-child(3) {
+    transform: rotate(0);
+  }
+
+  header button.open span:first-child {
+    transform: rotate(45deg);
+  }
+
+  header button.open span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  header button.open span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  header a {
+    @apply text-white text-center m-auto;
+  }
+
+  header a h1 {
+    @apply m-auto;
+  }
+
+  @screen md {
     header {
       @apply hidden;
     }

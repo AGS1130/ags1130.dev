@@ -6,6 +6,7 @@
     "build": "svelte-kit build",
     "start": "svelte-kit start",
     "preview": "svelte-kit preview",
+    "analysis": "windicss-analysis",
     "lint": "prettier --check . && eslint --ignore-path .gitignore .",
     "format": "prettier --write ."
   },
@@ -14,14 +15,9 @@
     "@sveltejs/kit": "next",
     "@typescript-eslint/eslint-plugin": "^4.23.0",
     "@typescript-eslint/parser": "^4.23.0",
-    "autoprefixer": "^10.2.5",
-    "cssnano": "^5.0.2",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.0",
-    "postcss": "^8.2.15",
-    "postcss-load-config": "^3.0.1",
-    "postcss-nested": "^5.0.5",
     "prettier": "~2.2.1",
     "prettier-plugin-svelte": "^2.3.0",
     "stylelint": "^13.13.1",
@@ -29,10 +25,11 @@
     "stylelint-config-standard": "^21.0.0",
     "svelte": "^3.38.2",
     "svelte-preprocess": "^4.7.3",
-    "tailwindcss": "^2.1.2",
+    "svelte-windicss-preprocess": "^4.0.3",
     "tslib": "^2.2.0",
     "typescript": "^4.2.4",
-    "vite": "^2.3.2"
+    "vite": "^2.3.2",
+    "windicss-analysis": "^0.2.0"
   },
   "type": "module"
 }

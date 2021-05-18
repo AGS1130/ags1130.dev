@@ -7,7 +7,7 @@
 
 <p>Say something a little about me.</p>
 
-<style lang="postcss">
+<style>
   h1 {
     @apply text-orange-500;
 
