@@ -94,7 +94,7 @@
           transform: translateX(0);
 
           &::before {
-            @apply block absolute w-full h-full rounded-full bg-primary-500 origin-top transition-all duration-300 ease-linear;
+            @apply block absolute w-full h-full rounded-full bg-red-500 origin-top transition-all duration-300 ease-linear;
 
             content: '';
             left: -100%;
@@ -180,13 +180,13 @@
       }
 
       .toggle-theme {
-        @apply bg-primary-500;
+        @apply bg-red-500;
 
         .indicator {
           @apply bg-gradient-to-t from-pink-600 via-orange-600 to-yellow-500;
 
           &::before {
-            @apply bg-primary-500;
+            @apply bg-red-500;
           }
         }
       }

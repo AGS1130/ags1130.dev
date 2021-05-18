@@ -23,10 +23,6 @@ module.exports = {
       indigo: getColors('#4B6CE2'),
       purple: getColors('#552583'),
       pink: getColors('#FD5C63'),
-
-      /* UI Colors */
-      primary: getColors('#AA0000'),
-      secondary: getColors('#B3995D'),
       light: getColors('#FFFFFF'),
       dark: getColors('#121212')
     },
