@@ -1,32 +1,21 @@
 {
   "name": "ags1130.dev",
   "version": "0.0.1",
+  "description": "Awesome content for frontend developers",
+  "repository": {
+    "url": "https://github.com/AGS1130/ags1130.dev"
+  },
   "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "start": "svelte-kit start",
-    "preview": "svelte-kit preview",
-    "analysis": "windicss-analysis",
-    "lint": "prettier --check . && eslint --ignore-path .gitignore .",
-    "format": "prettier --write ."
+    "start": "npm run dev",
+    "dev:backend": "cd backend && npm run start",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "npm-run-all --parallel dev:*",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "build": "npm-run-all build:*"
   },
+  "author": "Gregory Salinas",
   "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.0",
-    "@sveltejs/kit": "next",
-    "@typescript-eslint/eslint-plugin": "^4.24.0",
-    "@typescript-eslint/parser": "^4.24.0",
-    "eslint": "^7.26.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-svelte3": "^3.2.0",
-    "prettier": "~2.2.1",
-    "prettier-plugin-svelte": "^2.3.0",
-    "svelte": "^3.38.2",
-    "svelte-preprocess": "^4.7.3",
-    "svelte-windicss-preprocess": "^4.0.3",
-    "tslib": "^2.2.0",
-    "typescript": "^4.2.4",
-    "vite": "^2.3.3",
-    "windicss-analysis": "^0.2.0"
-  },
-  "type": "module"
+    "npm-run-all": "^4.1.5"
+  }
 }

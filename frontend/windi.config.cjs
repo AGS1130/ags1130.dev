@@ -1,10 +1,9 @@
-const { defineConfig } = require('windicss/helpers');
 const { getColors } = require('./utils/theme-colors.cjs');
 
 // It works ಠ_ಠ
 // console.log(getColors('#AA0000'))
 
-module.exports = defineConfig({
+module.exports = {
   extract: {
     include: ['./src/**/*.{html,js,svelte,ts}'],
     exclude: ['node_modules/**/*', '.git/**/*']
@@ -42,4 +41,4 @@ module.exports = defineConfig({
     }
   },
   darkMode: 'class'
-});
+};
