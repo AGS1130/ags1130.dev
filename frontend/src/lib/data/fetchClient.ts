@@ -9,4 +9,4 @@ const options = {
   useCdn: true
 };
 
-export const client = sanityClient(options);
+export const content = sanityClient(options);
