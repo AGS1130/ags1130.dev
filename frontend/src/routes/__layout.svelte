@@ -188,7 +188,7 @@
   }
 
   main section {
-    @apply text-center p-20 my-0 mx-auto max-w-4xl;
+    @apply text-center p-20;
   }
 
   @screen <md {
@@ -197,7 +197,7 @@
     }
 
     main section {
-      @apply p-12 transition-opacity delay-100 ease-linear;
+      @apply p-8 transition-opacity delay-100 ease-linear;
     }
 
     main section.open {

@@ -35,11 +35,8 @@ export default {
 
     // hydrate the <div id="svelte"> element in src/app.html
     target: '#svelte',
-
-    vite: {
-      ssr: {
-        noExternal: Object.keys(pkg.dependencies || {})
-      }
-    }
   }
+
+  // Removed vite.ssr.noExternal; recommended fix for loading libraries
+  // https://github.com/vitejs/vite/issues/2579#issuecomment-826849545
 };

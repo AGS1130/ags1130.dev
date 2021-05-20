@@ -34,7 +34,7 @@
       </div>
     {/if}
     {#if isFeatured}
-      <a href="https://google.com" target="_blank">
+      <a href="https://google.com" class="link" target="_blank">
         <small>Keep reading →</small>
       </a>
     {/if}
@@ -58,4 +58,21 @@
     @apply mb-6;
   }
 
+  article .link {
+    @apply inline-block;
+  }
+
+  article .link::after {
+    @apply block h-0.5 w-0 transition-all duration-300 ease-in-out;
+
+    content: '';
+  }
+
+  article .link:hover::after {
+    @apply w-full bg-black;
+  }
+
+  html.dark article .link:hover::after {
+    @apply bg-white;
+  }
 </style>
