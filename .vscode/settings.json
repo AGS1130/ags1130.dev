@@ -1,3 +1,7 @@
 {
-  "svelte.plugin.css.diagnostics.enable": false
+  "svelte.plugin.css.diagnostics.enable": false,
+  "[svelte]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  }
 }

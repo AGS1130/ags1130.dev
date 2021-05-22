@@ -2,14 +2,13 @@
   import { navMenu } from '$lib/data/store';
 
   const toggleNav = () => ($navMenu = $navMenu === 'close' ? 'open' : 'close');
-
 </script>
 
 <header>
-  <button class="{$navMenu}" on:click="{toggleNav}">
-    <span></span>
-    <span></span>
-    <span></span>
+  <button class={$navMenu} on:click={toggleNav}>
+    <span />
+    <span />
+    <span />
   </button>
   <a href="/"><h1>AGS1130</h1></a>
 </header>
@@ -72,5 +71,4 @@
       @apply hidden;
     }
   }
-
 </style>

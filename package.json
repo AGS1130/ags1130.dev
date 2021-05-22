@@ -13,6 +13,12 @@
     "build:backend": "cd backend && npm run build",
     "build:frontend": "cd frontend && npm run build",
     "build": "npm-run-all build:*",
+    "format:backend": "cd backend && npm run format",
+    "format:frontend": "cd frontend && npm run format",
+    "format": "npm-run-all --parallel format:*",
+    "lint:backend": "cd backend && npm run lint",
+    "lint:frontend": "cd frontend && npm run lint",
+    "lint": "npm-run-all --parallel format:*",
     "reset:backend": "cd backend && rm -rf node_modules && yarn install",
     "reset:frontend": "cd frontend && rm -rf node_modules && pnpm install",
     "reset": "npm-run-all --parallel reset:*"

@@ -8,7 +8,6 @@
       pageSlug = params.slug;
     }
   });
-
 </script>
 
 <svelte:head>

@@ -15,13 +15,12 @@
     $colorTheme = $colorTheme === 'dark' ? 'light' : 'dark';
     document.querySelector('html').classList.toggle('dark');
   };
-
 </script>
 
 <aside class="{$navMenu} {$colorTheme}">
   <div class="sticky-scrollable">
     <div class="logo-wrapper">
-      <a href="/" on:click="{toggleNav}" class="logo">
+      <a href="/" on:click={toggleNav} class="logo">
         <img src="/img/logo-{$colorTheme === 'dark' ? 'white' : 'black'}.svg" alt="AGS1130 Logo" />
       </a>
     </div>
@@ -29,13 +28,13 @@
     <SocialLinks />
     <nav>
       {#each navLinks as { name, url }}
-        <a href="{url}" class="link" class:active="{currentPath === url}" on:click="{toggleNav}">{name}</a>
+        <a href={url} class="link" class:active={currentPath === url} on:click={toggleNav}>{name}</a>
       {/each}
     </nav>
     <input type="text" placeholder="Search" />
     <h4>Toggle Theme</h4>
-    <button on:click="{toggleTheme}" class="toggle-theme">
-      <div class="indicator"></div>
+    <button on:click={toggleTheme} class="toggle-theme">
+      <div class="indicator" />
     </button>
     <h4>Popular Tags</h4>
     <Tags />
@@ -194,5 +193,4 @@
       transform: translateX(0);
     }
   }
-
 </style>

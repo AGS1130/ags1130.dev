@@ -9,7 +9,6 @@
       pageSlug = tags[params.slug].name;
     }
   });
-
 </script>
 
 <svelte:head>

@@ -2,7 +2,6 @@
   import Tags from '$lib/components/Tags.svelte';
 
   export let isFeatured = false;
-
 </script>
 
 <!-- The loop is to test the UI -->

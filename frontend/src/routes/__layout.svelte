@@ -12,7 +12,6 @@
   onMount(() => {
     $colorTheme === 'dark' && document.querySelector('html').classList.add('dark');
   });
-
 </script>
 
 <svelte:head>
@@ -22,14 +21,14 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/{$colorTheme}-mode/favicon-16x16.png" />
   <link rel="manifest" href="/{$colorTheme}-mode/site.webmanifest" />
   <link rel="mask-icon" href="/{$colorTheme}-mode/safari-pinned-tab.svg" color="#000000" />
-  <meta name="msapplication-TileColor" content="{$colorTheme === 'light' ? '#ffffff' : '#000000'}" />
-  <meta name="theme-color" content="{$colorTheme === 'light' ? '#ffffff' : '#000000'}" />
+  <meta name="msapplication-TileColor" content={$colorTheme === 'light' ? '#ffffff' : '#000000'} />
+  <meta name="theme-color" content={$colorTheme === 'light' ? '#ffffff' : '#000000'} />
 </svelte:head>
 
 <Header />
 <main>
   <Aside />
-  <section class="{$navMenu}">
+  <section class={$navMenu}>
     <slot />
   </section>
 </main>
@@ -204,5 +203,4 @@
       @apply hidden;
     }
   }
-
 </style>

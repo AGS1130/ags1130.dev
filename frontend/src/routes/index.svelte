@@ -13,7 +13,6 @@
       .then(res => console.log(res))
       .catch(err => console.log(err));
   });
-
 </script>
 
 <svelte:head>
@@ -21,4 +20,4 @@
   <title>AGS1130 | Home</title>
 </svelte:head>
 
-<Articles isFeatured="{true}" />
+<Articles isFeatured={true} />

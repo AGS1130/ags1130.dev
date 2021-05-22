@@ -3,12 +3,11 @@
   import { colorTheme, navMenu } from '$lib/data/store';
 
   const toggleNav = () => ($navMenu = $navMenu === 'close' ? 'open' : 'close');
-
 </script>
 
 {#each Object.entries(tags) as [tagName, { name, color, iconPath, gradient }] (tagName)}
   <button
-    on:click="{toggleNav}"
+    on:click={toggleNav}
     style="color: {$colorTheme === 'dark'
       ? color
       : color !== '#fff'
@@ -28,7 +27,7 @@
         style="fill: {$colorTheme === 'dark' ? color : color !== '#fff' ? '#fff' : '#000'};"
       >
         <title>{name} Icon</title>
-        <path d="{iconPath}"></path>
+        <path d={iconPath} />
       </svg>
     </a>
   </button>
@@ -60,5 +59,4 @@
       @apply mx-2 my-auto;
     }
   }
-
 </style>

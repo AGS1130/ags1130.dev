@@ -7,7 +7,7 @@
     "preview": "svelte-kit preview",
     "analysis": "windicss-analysis",
     "lint": "prettier --check . && eslint --ignore-path .gitignore .",
-    "format": "prettier --write ."
+    "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^1.0.0-next.0",

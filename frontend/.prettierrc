@@ -7,9 +7,16 @@
   "bracketSpacing": true,
   "proseWrap": "preserve",
   "printWidth": 120,
-  "svelteSortOrder": "options-scripts-markup-styles",
-  "svelteStrictMode": true,
-  "svelteBracketNewLine": true,
-  "svelteAllowShorthand": true,
-  "svelteIndentScriptAndStyle": true
+  "overrides": [
+    {
+      "files": ["./src/**/*.svelte"],
+      "options": {
+        "svelteSortOrder": "options-scripts-markup-styles",
+        "svelteStrictMode": true,
+        "svelteBracketNewLine": true,
+        "svelteAllowShorthand": true,
+        "svelteIndentScriptAndStyle": true
+      }
+    }
+  ]
 }

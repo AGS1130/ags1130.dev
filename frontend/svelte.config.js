@@ -3,7 +3,6 @@ import { windi } from 'svelte-windicss-preprocess';
 import adapterStatic from '@sveltejs/adapter-static';
 import { readFile } from 'fs/promises';
 
-const pkg = JSON.parse(await readFile(new URL('./package.json', import.meta.url)));
 const mode = process.env.NODE_ENV;
 const isProduction = mode === 'production';
 
@@ -34,7 +33,7 @@ export default {
     },
 
     // hydrate the <div id="svelte"> element in src/app.html
-    target: '#svelte',
+    target: '#svelte'
   }
 
   // Removed vite.ssr.noExternal; recommended fix for loading libraries
