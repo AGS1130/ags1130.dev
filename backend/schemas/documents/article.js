@@ -4,6 +4,11 @@ export default {
   title: 'Article Post',
   fields: [
     {
+      title: 'Tutorial',
+      name: 'isTutorial',
+      type: 'boolean'
+    },
+    {
       name: 'title',
       type: 'string',
       title: 'Title',
@@ -40,104 +45,17 @@ export default {
       description: 'Describe for SEO'
     },
     {
-      // Not a good idea to maintain 🙁
-      // Better to surrender control
       name: 'tags',
       type: 'array',
       title: 'Tags',
-      of: [{ type: 'string' }],
-      options: {
-        list: [
-          {
-            title: 'JavaScript',
-            value: 'javascript'
-          },
-          {
-            title: 'Typescript',
-            value: 'typescript'
-          },
-          {
-            title: 'Vue',
-            value: 'vue'
-          },
-          {
-            title: 'Angular',
-            value: 'angular'
-          },
-          {
-            title: 'React',
-            value: 'react'
-          },
-          {
-            title: 'Svelte',
-            value: 'svelte'
-          },
-          {
-            title: 'Next.js',
-            value: 'nextjs'
-          },
-          {
-            title: 'Nuxt.js',
-            value: 'nuxtjs'
-          },
-          {
-            title: 'Gatsby',
-            value: 'gatsby'
-          },
-          {
-            title: 'Gridsome',
-            value: 'gridsome'
-          },
-          {
-            title: 'CSS',
-            value: 'css'
-          },
-          {
-            title: 'PostCSS',
-            value: 'postcss'
-          },
-          {
-            title: 'Sass',
-            value: 'sass'
-          },
-          {
-            title: 'Bootstrap',
-            value: 'bootstrap'
-          },
-          {
-            title: 'Bulma',
-            value: 'bulma'
-          },
-          {
-            title: 'Tailwind CSS',
-            value: 'tailwindcss'
-          },
-          {
-            title: 'Webpack',
-            value: 'webpack'
-          },
-          {
-            title: 'Rollup',
-            value: 'rollup'
-          },
-          {
-            title: 'Vite',
-            value: 'vite'
-          },
-          {
-            title: 'Lighthouse',
-            value: 'lighthouse'
-          },
-          {
-            title: 'Jamstack',
-            value: 'jamstack'
-          },
-          {
-            title: 'Personal',
-            value: 'personal'
-          }
-        ]
-      }
+      of: [
+        {
+          type: 'reference',
+          to: [
+            {type: 'tag'},
+          ]
+        }
+      ]
     }
   ]
-}
+};
