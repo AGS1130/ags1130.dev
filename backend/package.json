@@ -5,7 +5,8 @@
   "description": "",
   "main": "package.json",
   "scripts": {
-    "start": "sanity start",
+    "start": "npm run dev",
+    "dev": "sanity start",
     "build": "sanity build",
     "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
     "lint": "eslint ."
