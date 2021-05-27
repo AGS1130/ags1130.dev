@@ -1,11 +1,12 @@
 import sanityClient from '@sanity/client';
+import { api } from '../../../../backend/sanity.json'
+const { projectId, dataset } = api
 
 // create instance of sanityClient
 // connects frontend to Sanity Studio
 const options = {
-  projectId: 'cv1l13fa',
-  dataset: 'production',
-  token: '',
+  projectId,
+  dataset,
   useCdn: true
 };
 
