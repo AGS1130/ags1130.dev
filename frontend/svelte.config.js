@@ -1,7 +1,6 @@
 import sveltePreprocess from 'svelte-preprocess';
 import { windi } from 'svelte-windicss-preprocess';
-import adapterStatic from '@sveltejs/adapter-static';
-import { readFile } from 'fs/promises';
+import adapt from '@sveltejs/adapter-static';
 
 const mode = process.env.NODE_ENV;
 const isProduction = mode === 'production';
@@ -28,10 +27,7 @@ export default {
     // By default, `npm run build` will create a standard Node app.
     // You can create optimized builds for different platforms by
     // specifying a different adapter
-    adapter: {
-      adapt: adapterStatic
-    },
-
+    adapter: { adapt },
     // hydrate the <div id="svelte"> element in src/app.html
     target: '#svelte'
   }

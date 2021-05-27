@@ -1,37 +1,44 @@
 <script lang="ts">
-  import tags from '$lib/data/tags';
   import { colorTheme, navMenu } from '$lib/data/store';
 
+  export let tags;
+  tags = tags && tags.tags ? tags.tags : [];
+
+  $: console.log(tags);
+
   const toggleNav = () => ($navMenu = $navMenu === 'close' ? 'open' : 'close');
+
 </script>
 
-{#each Object.entries(tags) as [tagName, { name, color, iconPath, gradient }] (tagName)}
-  <button
-    on:click={toggleNav}
-    style="color: {$colorTheme === 'dark'
-      ? color
-      : color !== '#fff'
-      ? '#fff'
-      : '#000'}; background-color: {color}; background-image: {`${
-      $colorTheme === 'dark' ? 'linear-gradient(#000, #000),' + gradient : gradient
-    };`}; {$colorTheme === 'dark' ? 'background-origin: border-box; background-clip: content-box, border-box;' : ''}"
-  >
-    <a href="/tags/{tagName}">
-      <p>{name}</p>
-      <svg
-        role="img"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="32"
-        style="fill: {$colorTheme === 'dark' ? color : color !== '#fff' ? '#fff' : '#000'};"
-      >
-        <title>{name} Icon</title>
-        <path d={iconPath} />
-      </svg>
-    </a>
-  </button>
-{/each}
+{#if tags.length > 0}
+  {#each tags as { name, color, iconPath, gradient, slug } (name)}
+    <button
+      on:click={toggleNav}
+      style="color: {$colorTheme === 'dark'
+        ? color
+        : color !== '#fff'
+        ? '#fff'
+        : '#000'}; background-color: {color}; background-image: {`${
+        $colorTheme === 'dark' ? 'linear-gradient(#000, #000),' + gradient : gradient
+      };`}; {$colorTheme === 'dark' ? 'background-origin: border-box; background-clip: content-box, border-box;' : ''}"
+    >
+      <a href="/tags/">
+        <p>{name}</p>
+        <svg
+          role="img"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="32"
+          style="fill: {$colorTheme === 'dark' ? color : color !== '#fff' ? '#fff' : '#000'};"
+        >
+          <title>{name} Icon</title>
+          <path d={iconPath} />
+        </svg>
+      </a>
+    </button>
+  {/each}
+{/if}
 
 <style>
   button {
@@ -59,4 +66,5 @@
       @apply mx-2 my-auto;
     }
   }
+
 </style>

@@ -1,3 +1,19 @@
+<script lang="ts" context="module">
+  /**
+   * @type {import('@sveltejs/kit').Load}
+   */
+  export async function load({ page, fetch, session, context }) {
+    try {
+      const res = await fetch('api/tags');
+      const { tags } = await res.json();
+      return { props: { tags } };
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+</script>
+
 <script lang="ts">
   import { onMount } from 'svelte';
 
@@ -9,9 +25,12 @@
 
   import { navMenu, colorTheme } from '$lib/data/store';
 
+  export let tags;
+
   onMount(() => {
     $colorTheme === 'dark' && document.querySelector('html').classList.add('dark');
   });
+
 </script>
 
 <svelte:head>
@@ -27,7 +46,7 @@
 
 <Header />
 <main>
-  <Aside />
+  <Aside {tags} />
   <section class={$navMenu}>
     <slot />
   </section>
@@ -203,4 +222,5 @@
       @apply hidden;
     }
   }
+
 </style>

@@ -5,6 +5,7 @@
   import Tags from '$lib/components/Tags.svelte';
   import SocialLinks from '$lib/components/SocialLinks.svelte';
 
+  export let tags;
   let currentPath = '';
 
   page.subscribe(({ path }) => (currentPath = path));
@@ -15,6 +16,7 @@
     $colorTheme = $colorTheme === 'dark' ? 'light' : 'dark';
     document.querySelector('html').classList.toggle('dark');
   };
+
 </script>
 
 <aside class="{$navMenu} {$colorTheme}">
@@ -37,7 +39,7 @@
       <div class="indicator" />
     </button>
     <h4>Popular Tags</h4>
-    <Tags />
+    <Tags {tags} />
   </div>
 </aside>
 
@@ -193,4 +195,5 @@
       transform: translateX(0);
     }
   }
+
 </style>
