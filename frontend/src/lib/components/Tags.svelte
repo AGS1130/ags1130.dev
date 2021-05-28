@@ -4,8 +4,6 @@
   export let tags;
   tags = tags && tags.tags ? tags.tags : [];
 
-  $: console.log(tags);
-
   const toggleNav = () => ($navMenu = $navMenu === 'close' ? 'open' : 'close');
 
 </script>
@@ -22,7 +20,7 @@
         $colorTheme === 'dark' ? 'linear-gradient(#000, #000),' + gradient : gradient
       };`}; {$colorTheme === 'dark' ? 'background-origin: border-box; background-clip: content-box, border-box;' : ''}"
     >
-      <a href="/tags/">
+      <a href="/tags/{slug.current || `#`}">
         <p>{name}</p>
         <svg
           role="img"

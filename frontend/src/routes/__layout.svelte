@@ -2,11 +2,14 @@
   /**
    * @type {import('@sveltejs/kit').Load}
    */
-  export async function load({ page, fetch, session, context }) {
+  export async function load({ fetch }) {
     try {
-      const res = await fetch('api/tags');
-      const { tags } = await res.json();
-      return { props: { tags } };
+      const res = await fetch('api/tags/popular');
+
+      if (res.ok) {
+        let { tags } = await res.json();
+        return { props: { tags: JSON.parse(tags) } };
+      }
     } catch (err) {
       console.log(err);
     }

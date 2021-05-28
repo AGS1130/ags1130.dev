@@ -1,8 +1,15 @@
+// The source for colors and SVG Paths
+// https://simple-icons.github.io/simple-icons-website/
 export default {
   name: 'tag',
   title: 'Tag',
   type: 'document',
   fields: [
+    {
+      title: 'Popular',
+      name: 'isPopular',
+      type: 'boolean'
+    },
     {
       name: 'name',
       type: 'string',
