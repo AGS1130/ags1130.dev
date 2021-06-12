@@ -2,6 +2,7 @@
   import { page } from '$app/stores';
   import navLinks from '$lib/data/navigation';
   import { navMenu, colorTheme } from '$lib/data/store';
+
   import Tags from '$lib/components/Tags.svelte';
   import SocialLinks from '$lib/components/SocialLinks.svelte';
 

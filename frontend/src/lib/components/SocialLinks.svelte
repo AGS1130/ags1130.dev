@@ -1,6 +1,7 @@
 <script lang="ts">
   import { colorTheme } from '$lib/data/store';
   import socialLinks from '$lib/data/social';
+
 </script>
 
 <div class="social-links">
@@ -36,4 +37,5 @@
     width: 26px;
     height: 26px;
   }
+
 </style>

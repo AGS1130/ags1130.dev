@@ -2,6 +2,7 @@
   import { navMenu } from '$lib/data/store';
 
   const toggleNav = () => ($navMenu = $navMenu === 'close' ? 'open' : 'close');
+
 </script>
 
 <header>
@@ -20,6 +21,7 @@
 
   header button {
     @apply absolute flex flex-col justify-around cursor-pointer h-8;
+    top: 36px;
   }
 
   header button:focus {
@@ -71,4 +73,5 @@
       @apply hidden;
     }
   }
+
 </style>

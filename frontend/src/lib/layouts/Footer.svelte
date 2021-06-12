@@ -3,6 +3,7 @@
   import SocialLinks from '$lib/components/SocialLinks.svelte';
 
   const thisYear = new Date().getFullYear();
+
 </script>
 
 <footer class={$navMenu}>
@@ -23,4 +24,5 @@
   footer.open {
     @apply hidden;
   }
+
 </style>

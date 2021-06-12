@@ -2,14 +2,13 @@
   import { colorTheme, navMenu } from '$lib/data/store';
 
   export let tags;
-  tags = tags && tags.tags ? tags.tags : [];
 
   const toggleNav = () => ($navMenu = $navMenu === 'close' ? 'open' : 'close');
 
 </script>
 
-{#if tags.length > 0}
-  {#each tags as { name, color, iconPath, gradient, slug } (name)}
+{#if tags && tags.tags}
+  {#each tags.tags as { name, color, iconPath, gradient, slug } (name)}
     <button
       on:click={toggleNav}
       style="color: {$colorTheme === 'dark'
