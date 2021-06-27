@@ -14,7 +14,6 @@
       console.log(err);
     }
   }
-
 </script>
 
 <script lang="ts">
@@ -33,7 +32,6 @@
   onMount(() => {
     $colorTheme === 'dark' && document.querySelector('html').classList.add('dark');
   });
-
 </script>
 
 <svelte:head>
@@ -225,5 +223,4 @@
       @apply hidden;
     }
   }
-
 </style>
